@@ -1,42 +1,44 @@
-let button = document.querySelector("button");
-let input = document.querySelector("input");
-let ul = document.querySelector("ul");
+let hh = 0;
+let mm = 0;
+let ss = 0;
 
-inputValor = () => input.value.length;
+let cron;
 
-criarTarefa = () => {
-  let li = document.createElement("li");
+function iniciar() {
+  cron = setInterval(() => {
+    tempo();
+  }, 1000);
+}
 
-  li.appendChild(document.createTextNode(input.value));
-  ul.appendChild(li);
-  input.value = "";
+function pausar() {
+  clearInterval(cron);
+}
 
-  alterarFundo = () => {
-    li.classList.toggle("done");
-  };
+function parar() {
+  clearInterval(cron);
+  hh = 0;
+  mm = 0;
+  ss = 0;
 
-  li.addEventListener("click", alterarFundo);
+  document.getElementById("contagem").innerText = "00:00:00";
+}
 
-  let dBtn = document.createElement("button");
-  dBtn.appendChild(document.createTextNode("X"));
-  li.appendChild(dBtn);
-
-  deleteListItem = () => {
-    li.classList.add("delete");
-  };
-  dBtn.addEventListener("click", deleteListItem);
-};
-
-addTarefaMouse = () => {
-  if (inputValor() > 0) {
-    criarTarefa();
+function tempo() {
+  ss++;
+  if (ss == 60) {
+    ss = 0;
+    mm++;
   }
-};
-button.addEventListener("click", addTarefaMouse);
-
-addTarefaTeclado = () => {
-  if (inputValor() > 0 && event.which === 13) {
-    criarTarefa();
+  if (mm == 60) {
+    mm = 0;
+    hh++;
   }
-};
-input.addEventListener("keypress", addTarefaTeclado);
+
+  let formato =
+    (hh < 10 ? "0" + hh : hh) +
+    ":" +
+    (mm < 10 ? "0" + mm : mm) +
+    ":" +
+    (ss < 10 ? "0" + ss : ss);
+  document.getElementById("contagem").innerText = formato;
+}

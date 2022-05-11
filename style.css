@@ -1,99 +1,54 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
 body {
-  background: linear-gradient(
-    292deg,
-    rgba(23, 154, 235, 1) 0%,
-    rgba(37, 176, 212, 1) 46%
-  );
+  background-color: #000f08;
 }
-
-h1 {
-  padding: 45px;
-  text-align: center;
-}
-
 .container {
-  text-align: center;
-  min-width: 45%;
-  max-width: max-content;
-  display: block;
-  margin: auto;
-  padding: 20px 30px;
-  border-radius: 5px;
-  box-shadow: #01041370 -10px 10px 25px;
-}
-
-#tarefa-input {
-  border: 1px solid black;
-  padding: 10px;
-  border-radius: 5px;
-  width: 70%;
-  text-align: center;
-  color: black;
-}
-
-#tarefa-button {
-  padding: 10px;
-  border-radius: 5px;
-  background: #fff;
-  font-weight: bold;
-  color: black;
-}
-
-#tarefa-button:hover {
-  background-color: #4eb9cd;
-  color: #f4f4f4;
-  cursor: pointer;
-}
-
-/* Criando efeitos do JS */
-
-.done {
-  background: rgb(22, 209, 118) !important;
-  color: white;
-}
-
-.delete {
-  display: none;
-}
-
-.list-container {
-  text-align: center;
-  min-width: 45%;
-  max-width: max-content;
-  display: block;
-  margin: auto;
-  padding: 20px;
-  margin-top: 50px;
-  border-radius: 5px;
-  box-shadow: #01041370 -10px 10px 25px;
-}
-
-li {
-  min-width: 450px;
-  margin-bottom: 10px;
-  list-style: none;
-  padding: 10px;
-  color: white;
-  border: 2px solid black;
-  border-radius: 5px;
-  background: #4eb9cd;
-  font-weight: bold;
+  margin: 200px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
-
-li:hover {
-  background: #76cfe0;
+.tempo h1 {
+  font-size: 5em;
+  padding: 5px;
+  color: #eb8a01;
 }
-
-button {
+.acoes {
+  padding: 10px;
+  display: flex;
+  gap: 30px;
+}
+.acoes button {
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  color: white;
+}
+.btn-iniciar {
+  background-color: #4d8b31;
+}
+.btn-iniciar:hover {
+  background-color: #396424;
+}
+.btn-parar {
+  background-color: #95190c;
+}
+.btn-parar:hover {
+  background-color: #6d140a;
+}
+.btn-pausar {
+  background-color: #00619e;
+}
+.btn-pausar:hover {
+  background-color: #025183;
+}
+.btn-pausar,
+.btn-parar,
+.btn-iniciar {
   cursor: pointer;
-  color: rgb(250, 4, 4);
-  font-weight: bold;
 }

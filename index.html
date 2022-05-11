@@ -4,21 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Lista de tarefas</title>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Cronômetro</title>
   </head>
   <body>
-    <header>
-      <h1>LISTA DE TAREFAS</h1>
-    </header>
-
-    <div class="container">
-      <input id="tarefa-input" type="text" placeholder="Digite uma tarefa..." />
-      <button id="tarefa-button">Adicionar</button>
-    </div>
-    <div class="list-container">
-      <ul></ul>
-    </div>
+     <div class="container">
+      <div class="tempo">
+        <h1 id="contagem">00:00:00</h1>
+      </div>
+      <div class="acoes">
+        <button onclick="iniciar()" class="btn-iniciar">Iniciar</button>
+        <button onclick="pausar()" class="btn-pausar">Pausar</button>
+        <button onclick="parar()" class="btn-parar">Parar</button>
+      </div>
+      
     <script src="./script.js"></script>
   </body>
 </html>
