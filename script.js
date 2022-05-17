@@ -4,27 +4,28 @@ let ss = 0;
 
 let cron;
 
-function iniciar() {
+iniciar = () => {
   cron = setInterval(() => {
     tempo();
   }, 1000);
-}
+};
 
-function pausar() {
+pausar = () => {
   clearInterval(cron);
-}
+};
 
-function parar() {
+parar = () => {
   clearInterval(cron);
   hh = 0;
   mm = 0;
   ss = 0;
 
-  document.getElementById("contagem").innerText = "00:00:00";
-}
+  document.getElementById("cont").innerHTML = "00:00:00";
+};
 
-function tempo() {
+tempo = () => {
   ss++;
+
   if (ss == 60) {
     ss = 0;
     mm++;
@@ -34,11 +35,12 @@ function tempo() {
     hh++;
   }
 
-  let formato =
+  let format =
     (hh < 10 ? "0" + hh : hh) +
     ":" +
     (mm < 10 ? "0" + mm : mm) +
     ":" +
     (ss < 10 ? "0" + ss : ss);
-  document.getElementById("contagem").innerText = formato;
-}
+
+  document.getElementById("cont").innerHTML = format;
+};
