@@ -13,6 +13,7 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
 .tempo h1 {
   font-size: 5em;
   padding: 5px;
@@ -23,7 +24,7 @@ body {
   display: flex;
   gap: 30px;
 }
-.acoes button {
+button {
   padding: 10px;
   border-radius: 10px;
   font-size: 20px;
@@ -35,12 +36,14 @@ body {
 .btn-iniciar:hover {
   background-color: #396424;
 }
+
 .btn-parar {
   background-color: #95190c;
 }
 .btn-parar:hover {
   background-color: #6d140a;
 }
+
 .btn-pausar {
   background-color: #00619e;
 }
