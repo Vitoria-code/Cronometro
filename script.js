@@ -20,7 +20,7 @@ parar = () => {
   mm = 0;
   ss = 0;
 
-  document.getElementById("cont").innerHTML = "00:00:00";
+  document.getElementById("contagem").innerHTML = "00:00:00";
 };
 
 tempo = () => {
@@ -42,5 +42,5 @@ tempo = () => {
     ":" +
     (ss < 10 ? "0" + ss : ss);
 
-  document.getElementById("cont").innerHTML = format;
+  document.getElementById("contagem").innerHTML = format;
 };
